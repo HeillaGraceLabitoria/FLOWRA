@@ -1,0 +1,1686 @@
+/* ===================================================
+   FLOWRA BANK: OFFICIAL MAIN STYLESHEET (main.css)
+   Colors: #1B4332 (Dark Green), #95B8A2 (Sage Green), #FFFFFF
+   Strictly Zero Yellow/Gold
+=================================================== */
+
+:root {
+  --dark-green: #1B4332;
+  --sage-green: #95B8A2;
+  --pure-white: #FFFFFF;
+  --off-white: #F8FAF9;
+  --border-gray: #E2E8F0;
+  --text-dark: #0F172A;
+  --text-muted: #475569;
+  --gold-gradient: linear-gradient(135deg, #FFE89E 0%, #D4AF37 40%, #AA7C11 75%, #F5D77F 100%);
+  --nav-bg: #0F281E;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--pure-white);
+  color: var(--text-dark);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ==================== 1. STATIC TOP NAVBAR ==================== */
+.static-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 68px;
+  background-color: var(--nav-bg);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(149, 184, 162, 0.2);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+}
+
+.nav-inner {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.nav-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--pure-white);
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+
+.logo-subtitle {
+  font-size: 0.55rem;
+  color: var(--sage-green);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.nav-links-center {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.nav-item {
+  background: transparent;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #D2E4DA;
+  cursor: pointer;
+  padding: 0.5rem 0.2rem;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-item:hover {
+  color: var(--pure-white);
+}
+
+.nav-item.active {
+  color: var(--pure-white);
+  font-weight: 700;
+}
+
+.nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background-color: var(--sage-green);
+  border-radius: 2px;
+}
+
+.nav-right-actions {
+  display: flex;
+  align-items: center;
+}
+
+.menu-toggle-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(149, 184, 162, 0.35);
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+
+.menu-toggle-btn:hover {
+  background: rgba(149, 184, 162, 0.2);
+  border-color: var(--sage-green);
+}
+
+.dash-line {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: var(--pure-white);
+  border-radius: 2px;
+}
+
+/* ==================== 2. CONTENT & SPA VIEWS ==================== */
+.content-wrapper {
+  padding-top: 68px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-view {
+  display: none;
+  animation: fadeIn 0.25s ease-in-out forwards;
+}
+
+.page-view.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==================== 3. HERO SECTION ==================== */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 68px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: 
+    linear-gradient(
+      135deg, 
+      rgba(15, 40, 30, 0.88) 0%, 
+      rgba(27, 67, 50, 0.78) 55%, 
+      rgba(15, 30, 22, 0.88) 100%
+    ),
+    url('flowra_bg (1).webp') center center / cover no-repeat,
+    url('flowra_bg(1).webp') center center / cover no-repeat;
+  padding: 5rem 5%;
+  overflow: hidden;
+}
+
+.hero-container.hero-centered {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-content {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  background: rgba(149, 184, 162, 0.22);
+  color: var(--sage-green);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.4rem 1.1rem;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(149, 184, 162, 0.4);
+}
+
+.hero-heading {
+  font-size: 3.6rem;
+  font-weight: 800;
+  color: var(--pure-white);
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-heading span {
+  color: var(--sage-green);
+  display: block;
+}
+
+.hero-desc {
+  font-size: 1.15rem;
+  color: #E2ECE5;
+  line-height: 1.8;
+  margin: 0 auto 2.5rem;
+  max-width: 680px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: var(--sage-green);
+  color: var(--dark-green);
+  border: none;
+  padding: 1rem 2.4rem;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.btn-primary:hover {
+  background: #A7C5B2;
+  transform: translateY(-2px);
+}
+
+/* ==================== 4. SERVICES VIEW & CHECKMARK BADGES ==================== */
+.generic-header {
+  text-align: center;
+  padding: 4.5rem 5% 2.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.generic-header h2 {
+  font-size: 2.6rem;
+  color: var(--dark-green);
+  margin-top: 0.4rem;
+}
+
+.services-list-grid {
+  max-width: 1200px;
+  margin: 0 auto 3.5rem;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.service-box {
+  background: var(--off-white);
+  border: 1.5px solid var(--border-gray);
+  border-radius: 16px;
+  padding: 3rem 2.5rem;
+  transition: all 0.25s ease;
+}
+
+.service-box:hover {
+  border-color: var(--dark-green);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(27, 67, 50, 0.08);
+}
+
+.service-box h3 {
+  font-size: 1.85rem;
+  color: var(--dark-green);
+  margin-bottom: 0.6rem;
+}
+
+.service-lead {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.service-features-list h4 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--dark-green);
+  margin-bottom: 1rem;
+}
+
+.service-features-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.service-features-list ul li {
+  font-size: 0.98rem;
+  color: var(--text-dark);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+/* Green Circle with Bold Sage Checkmark */
+.check-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--dark-green);
+  border: 1.5px solid var(--sage-green);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(27, 67, 50, 0.25);
+}
+
+.check-circle svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--sage-green) !important;
+  stroke-width: 3.5 !important;
+  fill: none !important;
+  display: block;
+}
+
+/* FLOWRA Main Office Notice */
+.office-avail-banner {
+  max-width: 1200px;
+  margin: 0 auto 3.5rem;
+  padding: 0 5%;
+}
+
+.office-avail-content {
+  background: linear-gradient(135deg, #0F281E 0%, #1B4332 100%);
+  color: var(--pure-white);
+  padding: 2.4rem 2.8rem;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  box-shadow: 0 10px 25px rgba(15, 40, 30, 0.2);
+}
+
+.office-icon {
+  font-size: 2.8rem;
+}
+
+.office-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.office-text h3 {
+  font-size: 1.45rem;
+  color: var(--sage-green);
+  margin-bottom: 0.4rem;
+}
+
+.office-text p {
+  font-size: 0.96rem;
+  color: #D2E4DA;
+  line-height: 1.6;
+}
+
+.btn-avail-office {
+  background: var(--sage-green);
+  color: var(--dark-green);
+  border: none;
+  padding: 0.9rem 1.9rem;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-avail-office:hover {
+  background: var(--pure-white);
+}
+
+/* Button to Trigger Modal */
+.cards-popup-trigger-wrap {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.btn-open-cards-modal {
+  background: var(--pure-white);
+  border: 2px solid var(--dark-green);
+  color: var(--dark-green);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 1.25rem 3rem;
+  border-radius: 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 18px rgba(27, 67, 50, 0.08);
+}
+
+.btn-open-cards-modal:hover {
+  background: var(--dark-green);
+  color: var(--pure-white);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(27, 67, 50, 0.25);
+}
+
+/* ==================== 5. MODAL 1: OUR PRODUCTS CARDS POPUP ==================== */
+.full-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(9, 20, 14, 0.88);
+  backdrop-filter: blur(10px);
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  padding: 1.5rem;
+}
+
+.full-modal-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.full-modal-dialog {
+  background: #09140E;
+  border: 1px solid rgba(149, 184, 162, 0.25);
+  border-radius: 24px;
+  max-width: 1320px;
+  width: 100%;
+  max-height: 92vh;
+  overflow-y: auto;
+  padding: 3.5rem 3rem 4rem;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+  transform: scale(0.96);
+  transition: transform 0.25s ease;
+}
+
+.full-modal-backdrop.open .full-modal-dialog {
+  transform: scale(1);
+}
+
+.cards-modal-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.cards-modal-eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: var(--pure-white);
+  display: block;
+}
+
+.cards-modal-title {
+  color: var(--sage-green);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+}
+
+.cards-modal-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3.5rem;
+  perspective: 1200px;
+}
+
+.card-item-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-flip-container {
+  width: 380px;
+  height: 240px;
+  cursor: pointer;
+  perspective: 1200px;
+}
+
+.card-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.card-flip-container:hover .card-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.card-price-tag {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--pure-white);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.card-fee-label {
+  font-size: 0.75rem;
+  color: var(--sage-green);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card-actions-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn-order-card {
+  background: var(--sage-green);
+  color: var(--dark-green);
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.55rem 1.6rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-order-card:hover {
+  background: var(--pure-white);
+  transform: translateY(-2px);
+}
+
+/* Description Buttons */
+.btn-description {
+  background: rgba(255, 255, 255, 0.05);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.55rem 1.6rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  color: #FFFFFF !important;
+}
+
+.btn-description.btn-debit:hover {
+  background: var(--sage-green);
+  border-color: var(--sage-green);
+  color: var(--dark-green) !important;
+}
+
+.btn-description.btn-credit:hover {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  color: var(--dark-green) !important;
+}
+
+.btn-description.btn-charge {
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  color: #FFFFFF !important;
+}
+
+.btn-description.btn-charge:hover {
+  background: #1B4332 !important;
+  border-color: var(--sage-green) !important;
+  color: #FFFFFF !important;
+}
+
+/* Card Faces */
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.card-front {
+  z-index: 2;
+  transform: rotateY(0deg);
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
+
+/* Debit Colorway */
+.flowra-card.debit {
+  background-color: #95B8A2 !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+.debit .card-watermark-logo {
+  position: absolute;
+  right: -25px;
+  bottom: -25px;
+  width: 220px;
+  height: 220px;
+  opacity: 0.28 !important;
+  pointer-events: none;
+  object-fit: contain;
+  filter: contrast(140%) brightness(85%) drop-shadow(-3px -3px 8px rgba(27, 67, 50, 0.45)) !important;
+}
+
+.debit .brand-title {
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 3px rgba(27, 67, 50, 0.3);
+}
+
+.debit .brand-sub,
+.debit .valid-date {
+  color: #1B4332 !important;
+  font-weight: 700;
+}
+
+.debit .card-number,
+.debit .holder-name,
+.debit .card-type-label {
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 3px rgba(27, 67, 50, 0.3);
+}
+
+.debit .back-number-text,
+.debit .back-legal,
+.debit .back-hotline,
+.debit .back-bank-name {
+  color: #1B4332 !important;
+}
+
+.debit .back-footer {
+  border-top: 1px solid rgba(27, 67, 50, 0.25);
+}
+
+/* Credit Colorway */
+.flowra-card.credit {
+  background-color: #FFFFFF !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4), 0 0 0 1.5px rgba(27, 67, 50, 0.2);
+}
+
+.credit .card-watermark-logo {
+  position: absolute;
+  right: -25px;
+  bottom: -25px;
+  width: 220px;
+  height: 220px;
+  opacity: 0.30 !important;
+  pointer-events: none;
+  object-fit: contain;
+  filter: contrast(135%) brightness(90%) drop-shadow(-2px -2px 6px rgba(27, 67, 50, 0.3)) !important;
+}
+
+.credit .card-logo-img {
+  filter: drop-shadow(0 2px 5px rgba(27, 67, 50, 0.25)) !important;
+}
+
+.credit .brand-title {
+  color: #1B4332 !important;
+}
+
+.credit .brand-sub,
+.credit .valid-date {
+  color: #2D6A4F !important;
+  font-weight: 700;
+}
+
+.credit .card-number,
+.credit .holder-name,
+.credit .card-type-label {
+  color: #1B4332 !important;
+}
+
+.credit .back-number-text,
+.credit .back-legal,
+.credit .back-hotline,
+.credit .back-bank-name {
+  color: #1B4332 !important;
+}
+
+.credit .back-footer {
+  border-top: 1px solid rgba(27, 67, 50, 0.2);
+}
+
+/* Executive Charge Credit Colorway */
+.flowra-card.charge {
+  background-color: #1B4332 !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(149, 184, 162, 0.4);
+}
+
+.charge .card-logo-img {
+  filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6)) !important;
+}
+
+.charge .card-watermark-logo {
+  position: absolute;
+  right: -25px;
+  bottom: -25px;
+  width: 220px;
+  height: 220px;
+  opacity: 0.32 !important;
+  pointer-events: none;
+  object-fit: contain;
+  filter: brightness(0) invert(1) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.6)) !important;
+}
+
+.charge .brand-title {
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.charge .brand-sub,
+.charge .valid-date {
+  color: var(--sage-green) !important;
+  font-weight: 700;
+}
+
+.charge .card-number,
+.charge .holder-name {
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.charge .card-type-label {
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.charge .back-number-text,
+.charge .back-legal,
+.charge .back-hotline,
+.charge .back-bank-name {
+  color: #CADCD0 !important;
+}
+
+.charge .back-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Hardware Components */
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.brand-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.card-logo-img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(27, 67, 50, 0.25));
+}
+
+.brand-title-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+}
+
+.brand-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 1px;
+}
+
+.hardware-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.gold-emv-chip {
+  width: 44px;
+  height: 32px;
+  background: var(--gold-gradient);
+  border-radius: 6px;
+  border: 1px solid rgba(126, 91, 9, 0.7);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.6), 0 3px 6px rgba(27, 67, 50, 0.2);
+  position: relative;
+}
+
+.gold-emv-chip::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.gold-paywave {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #D4AF37;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  transform: rotate(90deg);
+}
+
+.card-middle {
+  z-index: 2;
+  margin-top: 0.75rem;
+  width: 100%;
+}
+
+.card-number {
+  font-family: 'Poppins', monospace;
+  font-size: 1.25rem;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+  direction: ltr !important;
+  unicode-bidi: bidi-override !important;
+  text-align: left;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 2;
+}
+
+.holder-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.valid-date {
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.holder-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.card-meta-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.card-type-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.mag-stripe {
+  width: 100%;
+  height: 44px;
+  background: #111111;
+  margin-top: 1.25rem;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.back-body {
+  padding: 0 1.5rem 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.signature-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 0.75rem;
+}
+
+.silver-hologram {
+  width: 48px;
+  height: 32px;
+  background: linear-gradient(135deg, #E2E8F0 0%, #CBD5E1 30%, #94A3B8 50%, #F1F5F9 70%, #64748B 100%);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.sig-strip {
+  flex: 1;
+  height: 32px;
+  background: #FFFFFF;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  border: 1px solid #CBD5E1;
+}
+
+.sig-name {
+  font-family: 'Inter', cursive, sans-serif;
+  font-size: 0.82rem;
+  color: #1E293B;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.cvv-box {
+  font-family: 'Poppins', monospace;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: #0F172A;
+  letter-spacing: 0.1em;
+  padding-left: 0.5rem;
+  border-left: 1px dashed #94A3B8;
+}
+
+.back-emboss-area {
+  margin-top: 0.6rem;
+  margin-bottom: 0.3rem;
+  width: 100%;
+  display: block;
+  text-align: left;
+}
+
+.back-number-text {
+  font-family: 'Poppins', monospace;
+  font-size: 1.05rem;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  display: inline-block;
+  direction: ltr !important;
+  unicode-bidi: bidi-override !important;
+  text-align: left !important;
+  user-select: none;
+}
+
+.back-legal {
+  font-size: 0.54rem;
+  line-height: 1.45;
+  margin-top: 0.4rem;
+}
+
+.back-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.4rem;
+}
+
+.back-hotline {
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.back-bank-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+/* ==================== 6. MODAL 2: CARD SPECIFICATION DETAILS ==================== */
+.card-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(9, 20, 14, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 100001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  padding: 1.5rem;
+}
+
+.card-modal-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.card-modal-content {
+  background: #FFFFFF;
+  border-radius: 20px;
+  max-width: 680px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2.5rem;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  transform: translateY(20px);
+  transition: transform 0.25s ease;
+  border: 1px solid var(--border-gray);
+}
+
+.card-modal-backdrop.open .card-modal-content {
+  transform: translateY(0);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  color: var(--dark-green);
+}
+
+.modal-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--dark-green);
+  background: rgba(149, 184, 162, 0.25);
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+}
+
+.card-modal-content h2 {
+  font-size: 1.9rem;
+  color: var(--dark-green);
+  margin-bottom: 1.5rem;
+}
+
+.modal-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem 1.25rem;
+  background: var(--off-white);
+  border: 1px solid var(--border-gray);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.spec-cell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.35rem 0;
+  border-bottom: 1px dashed rgba(226, 232, 240, 0.8);
+}
+
+.spec-k {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.spec-v {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--dark-green);
+  text-align: right;
+}
+
+.modal-best-for {
+  background: rgba(149, 184, 162, 0.15);
+  border-left: 4px solid var(--dark-green);
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  margin-bottom: 1.25rem;
+}
+
+.modal-best-for h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--dark-green);
+  margin-bottom: 0.3rem;
+}
+
+.modal-best-for p {
+  font-size: 0.92rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.modal-note {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.modal-action-bar {
+  display: flex;
+  gap: 1rem;
+}
+
+/* ==================== 7. MODAL 3: CARD ORDERING & CREDENTIALS ==================== */
+.order-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(9, 20, 14, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 100002;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  padding: 1.5rem;
+}
+
+.order-modal-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.order-modal-content {
+  background: #FFFFFF;
+  border-radius: 24px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 92vh;
+  overflow-y: auto;
+  padding: 2.75rem 2.5rem;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  transform: translateY(20px);
+  transition: transform 0.25s ease;
+}
+
+.order-modal-backdrop.open .order-modal-content {
+  transform: translateY(0);
+}
+
+.order-modal-header {
+  margin-bottom: 2rem;
+}
+
+.order-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #2D6A4F;
+  text-transform: uppercase;
+}
+
+.order-modal-header h2 {
+  font-size: 1.85rem;
+  color: var(--dark-green);
+  margin: 0.2rem 0 0.8rem;
+}
+
+.order-price-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.order-price-badge span:first-child {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--dark-green);
+}
+
+.payment-method-pill {
+  background: rgba(149, 184, 162, 0.25);
+  color: var(--dark-green);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+}
+
+/* Form Controls */
+.form-group {
+  margin-bottom: 1.4rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.45rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid var(--border-gray);
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--dark-green);
+}
+
+/* Radio Cards */
+.fulfillment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1.5px solid var(--border-gray);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.radio-label:hover {
+  border-color: var(--sage-green);
+  background: #F8FAF9;
+}
+
+.radio-label input[type="radio"] {
+  display: none;
+}
+
+.radio-custom {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #CBD5E1;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.radio-label input[type="radio"]:checked + .radio-custom {
+  border-color: var(--dark-green);
+  background: var(--dark-green);
+}
+
+.radio-label input[type="radio"]:checked + .radio-custom::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #FFFFFF;
+}
+
+.radio-text strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+}
+
+.radio-text small {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Payment Notice Box */
+.payment-notice-box {
+  background: rgba(149, 184, 162, 0.15);
+  border: 1px solid rgba(149, 184, 162, 0.4);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.notice-icon {
+  font-size: 1.3rem;
+}
+
+.notice-text {
+  font-size: 0.85rem;
+  color: var(--dark-green);
+  line-height: 1.5;
+}
+
+/* ==================== 8. ABOUT US VIEW ==================== */
+.about-hero {
+  padding: 4.5rem 5% 2.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-eyebrow {
+  display: inline-block;
+  background: rgba(149, 184, 162, 0.25);
+  color: var(--dark-green);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.35rem 1rem;
+  border-radius: 20px;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.about-main-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--dark-green);
+  margin-bottom: 1.25rem;
+}
+
+.about-lead-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+.about-lead-text strong {
+  color: var(--dark-green);
+}
+
+.mv-container {
+  max-width: 1200px;
+  margin: 0 auto 4.5rem;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.mv-card {
+  background: var(--off-white);
+  border: 1.5px solid var(--border-gray);
+  border-radius: 16px;
+  padding: 2.5rem;
+  transition: all 0.25s ease;
+}
+
+.mv-card:hover {
+  border-color: var(--sage-green);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(27, 67, 50, 0.08);
+}
+
+.mv-tag {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--dark-green);
+  background: rgba(149, 184, 162, 0.25);
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+.mv-card h3 {
+  font-size: 1.4rem;
+  color: var(--dark-green);
+  margin-bottom: 0.75rem;
+}
+
+.mv-card p {
+  font-size: 1rem;
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+.why-choose-section {
+  max-width: 1200px;
+  margin: 0 auto 5rem;
+  padding: 0 5%;
+}
+
+.why-choose-section .section-eyebrow {
+  color: #2D6A4F !important;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.why-choose-section .section-title {
+  color: var(--dark-green) !important;
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.why-choose-section .section-subtitle {
+  color: var(--text-muted) !important;
+  font-size: 1rem;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.75rem;
+}
+
+.why-card {
+  background: var(--pure-white);
+  border: 1px solid var(--border-gray);
+  border-radius: 14px;
+  padding: 2rem;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.why-card:hover {
+  border-color: var(--dark-green);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(27, 67, 50, 0.06);
+}
+
+.why-icon-pill {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(149, 184, 162, 0.25);
+  color: var(--dark-green);
+  font-size: 0.85rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.why-card h4 {
+  font-size: 1.15rem;
+  color: var(--dark-green);
+  margin-bottom: 0.6rem;
+}
+
+.why-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.motto-banner {
+  background: linear-gradient(135deg, #0F281E 0%, #1B4332 100%);
+  color: var(--pure-white);
+  padding: 4rem 5%;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.motto-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--sage-green);
+  margin-bottom: 0.5rem;
+}
+
+.motto-phrase {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--pure-white);
+  letter-spacing: 0.03em;
+}
+
+/* ==================== 9. FAQS & CONTACT ==================== */
+.faq-list-wrap {
+  max-width: 800px;
+  margin: 0 auto 5rem;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.faq-item {
+  background: var(--off-white);
+  border: 1px solid var(--border-gray);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.faq-item h4 {
+  color: var(--dark-green);
+  margin-bottom: 0.4rem;
+}
+
+.contact-details-box {
+  max-width: 600px;
+  margin: 0 auto 5rem;
+  padding: 2.5rem;
+  background: var(--off-white);
+  border: 1px solid var(--border-gray);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* ==================== 10. FOOTER ==================== */
+.trust-footer {
+  background: #09140E;
+  padding: 2.5rem 5% 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #879C90;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-legal {
+  max-width: 850px;
+  margin: 0 auto 1.25rem;
+  line-height: 1.6;
+}
+
+.trust-footer strong {
+  color: var(--sage-green);
+}
+
+.footer-copyright {
+  font-size: 0.82rem;
+  color: #A3B8AD;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  letter-spacing: 0.04em;
+}
+
+/* ==================== 11. RESPONSIVE ==================== */
+@media (max-width: 900px) {
+  .hero-heading {
+    font-size: 2.8rem;
+  }
+  .about-main-title {
+    font-size: 2.4rem;
+  }
+  .motto-phrase {
+    font-size: 1.15rem;
+  }
+  .nav-links-center {
+    display: none;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .modal-specs-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flowra Bank | Spend smart. Flow better. Grow together.</title>
+
+  <!-- Google Fonts: Poppins & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <!-- ==================== STATIC ON-BRAND TOP NAVBAR ==================== -->
+  <header class="static-navbar">
+    <div class="nav-inner">
+      
+      <!-- Brand Logo on Left -->
+      <div class="brand-box" onclick="switchPage('home')">
+        <img src="logo_png.png" alt="Flowra Emblem" class="nav-logo">
+        <div class="brand-text">
+          <span class="logo-title">FLOWRA</span>
+          <span class="logo-subtitle">Time &amp; Peso</span>
+        </div>
+      </div>
+
+      <!-- Centered Menu Links -->
+      <nav class="nav-links-center">
+        <button class="nav-item active" id="btn-home" onclick="switchPage('home')">Home</button>
+        <button class="nav-item" id="btn-about" onclick="switchPage('about')">About Us</button>
+        <button class="nav-item" id="btn-services" onclick="switchPage('services')">Services</button>
+        <button class="nav-item" id="btn-faqs" onclick="switchPage('faqs')">FAQs</button>
+        <button class="nav-item" id="btn-contact" onclick="switchPage('contact')">Contact Us</button>
+      </nav>
+
+      <!-- Three-Dash Hamburger Menu Button -->
+      <div class="nav-right-actions">
+        <button class="menu-toggle-btn" title="Open Menu" onclick="alert('Flowra Quick Menu')">
+          <span class="dash-line"></span>
+          <span class="dash-line"></span>
+          <span class="dash-line"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==================== MAIN PAGE VIEWS ==================== -->
+  <div class="content-wrapper">
+
+    <!-- ==================== VIEW 1: HOME ==================== -->
+    <section id="view-home" class="page-view active">
+      <div class="hero-section">
+        <div class="hero-container hero-centered">
+          <div class="hero-content">
+            <span class="hero-eyebrow">Autonomous Community Finance</span>
+            <h1 class="hero-heading">
+              Every Hour &amp; Peso <span>Flows Together.</span>
+            </h1>
+            <p class="hero-desc">
+              Flowra bridges traditional monetary savings with a community time-banking ledger. Grow your Pesos with daily compounding dividends, and bank your skill hours for liquid perks, mutual loans, and community reciprocity.
+            </p>
+            <div class="hero-cta-group">
+              <button class="btn-primary" onclick="switchPage('services')">Explore Our Services →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 2: ABOUT US ==================== -->
+    <section id="view-about" class="page-view">
+      <div class="about-hero">
+        <span class="about-eyebrow">SINCE 2026</span>
+        <h2 class="about-main-title">About FLOWRA</h2>
+        <p class="about-lead-text">
+          Founded in 2026, <strong>FLOWRA</strong> is built around a simple idea: banking should be easy, flexible, secure, and designed to help people move forward. We provide financial solutions that support everyday spending, responsible borrowing, and long-term financial growth.
+        </p>
+      </div>
+
+      <div class="mv-container">
+        <div class="mv-card">
+          <div class="mv-tag">OUR MISSION</div>
+          <h3>Empowerment with Confidence</h3>
+          <p>To provide simple, secure, and flexible financial solutions that empower individuals to manage their money with confidence. Through convenient banking services and card options designed for different needs, FLOWRA aims to help customers make smarter financial decisions and achieve their goals.</p>
+        </div>
+        <div class="mv-card">
+          <div class="mv-tag">OUR VISION</div>
+          <h3>A Trusted Community Bank</h3>
+          <p>To become a trusted and innovative community bank where everyone has access to financial solutions that fit their lifestyle, helping them spend wisely, borrow responsibly, and grow confidently toward a better future.</p>
+        </div>
+      </div>
+
+      <div class="why-choose-section">
+        <div class="section-title-wrap">
+          <span class="section-eyebrow">DISTINCTION</span>
+          <h2 class="section-title">Why Choose FLOWRA?</h2>
+          <p class="section-subtitle">Financial solutions built to adapt around your lifestyle and ambitions.</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon-pill">01</div>
+            <h4>Simple and Convenient</h4>
+            <p>We make everyday banking easier through accessible and straightforward financial solutions.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon-pill">02</div>
+            <h4>Cards for Every Need</h4>
+            <p>Choose from <strong>DEBIT</strong>, <strong>PLATINUM CREDIT</strong>, or <strong>CHARGE</strong> based on your spending habits and financial needs.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon-pill">03</div>
+            <h4>Secure and Reliable</h4>
+            <p>We prioritize the safety of your money and transactions through secure banking services.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon-pill">04</div>
+            <h4>Built for Growth</h4>
+            <p>FLOWRA goes beyond everyday spending by helping customers manage their finances and work toward their goals.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon-pill">05</div>
+            <h4>Flexible and Customer-Focused</h4>
+            <p>Our services are designed around different lifestyles, giving customers the freedom to choose what works best for them.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon-pill">06</div>
+            <h4>Modern Banking Experience</h4>
+            <p>We provide a convenient and user-friendly banking experience designed for today's customers.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="motto-banner">
+        <h3 class="motto-title">FLOWRA</h3>
+        <p class="motto-phrase">Spend smart. Flow better. Grow together.</p>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 3: SERVICES ==================== -->
+    <section id="view-services" class="page-view">
+      <div class="generic-header">
+        <span class="hero-eyebrow">CORE SOLUTIONS</span>
+        <h2>OUR SERVICES</h2>
+      </div>
+
+      <!-- Core Services List (Savings Account & Personal Loans) -->
+<div class="services-list-grid">
+  <!-- 1. Savings Account -->
+  <div class="service-box">
+    <h3>Savings Account</h3>
+    <p class="service-lead">A secure place to save money while building healthy financial habits.</p>
+    <div class="service-features-list">
+      <h4>Features:</h4>
+      <ul>
+        <li>
+          <span class="check-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#95B8A2" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 13l4 4L19 7" />
+            </svg>
+          </span>
+          Personal savings account
+        </li>
+        <li>
+          <span class="check-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#95B8A2" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 13l4 4L19 7" />
+            </svg>
+          </span>
+          Account balance tracking
+        </li>
+        <li>
+          <span class="check-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#95B8A2" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 13l4 4L19 7" />
+            </svg>
+          </span>
+          Deposit and withdrawal
+        </li>
+        <li>
+          <span class="check-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#95B8A2" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 13l4 4L19 7" />
+            </svg>
+          </span>
+          Savings goals
+        </li>
+        <li>
+          <span class="check-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#95B8A2" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 13l4 4L19 7" />
+            </svg>
+          </span>
+          Transaction history
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 2. Personal Loans -->
+  <div class="service-box">
+    <h3>Personal Loans</h3>
+    <p class="service-lead">Flexible financing for planned expenses, emergencies, education, or personal needs.</p>
+    <div class="service-features-list">
+      <h4>Features:</h4>
+      <ul>
+        <li>
+          <span class="check-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#95B8A2" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 13l4 4L19 7" />
+            </svg>
+          </span>
+          Loan application
+        </li>
+        <li>
+          <span class="check-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#95B8A2" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 13l4 4L19 7" />
+            </svg>
+          </span>
+          Flexible repayment terms
+        </li>
+        <li>
+          <span class="check-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#95B8A2" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 13l4 4L19 7" />
+            </svg>
+          </span>
+          Loan balance tracking
+        </li>
+        <li>
+          <span class="check-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#95B8A2" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 13l4 4L19 7" />
+            </svg>
+          </span>
+          Monthly payment schedule
+        </li>
+        <li>
+          <span class="check-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#95B8A2" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 13l4 4L19 7" />
+            </svg>
+          </span>
+          Loan status monitoring
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+      <!-- Visit FLOWRA Main Office Callout -->
+      <div class="office-avail-banner">
+        <div class="office-avail-content">
+          <div class="office-icon">🏛️</div>
+          <div class="office-text">
+            <h3>Visit the Office to Avail</h3>
+            <p>To open a Savings Account or apply for Personal Loans, please visit the <strong>FLOWRA Main Office in Salvacion, Bayombong, Nueva Vizcaya</strong>. Our customer assistance desk will facilitate and verify your application directly on-site.</p>
+          </div>
+          <button class="btn-avail-office" onclick="switchPage('contact')">Get Office Address →</button>
+        </div>
+      </div>
+
+      <!-- Button Trigger to Pop Up Cards Showcase -->
+<div class="cards-popup-trigger-wrap">
+  <button class="btn-open-cards-modal" onclick="openProductsCardsModal()">
+    FLOWRA Cards →
+  </button>
+</div>
+    </section>
+
+    <!-- ==================== VIEW 4: FAQS ==================== -->
+    <section id="view-faqs" class="page-view">
+      <div class="generic-header">
+        <span class="hero-eyebrow">Support &amp; Answers</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-list-wrap">
+        <div class="faq-item">
+          <h4>What is Flowra Bank?</h4>
+          <p>Flowra is an independent, member-owned mutual financial and time-exchange network combining Peso savings with a reciprocal skill-sharing ledger.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Where is the FLOWRA Main Office located?</h4>
+          <p>Our main operations and customer desk are located at Salvacion, Bayombong, Nueva Vizcaya.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What are the costs for physical FLOWRA cards?</h4>
+          <p>Card issuance fees are: ₱250 for Debit, ₱300 for Platinum Credit, and ₱400 for Executive Charge Credit. All card fees must be settled via Online Payment only.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Can I pick up my card at the main office?</h4>
+          <p>Yes. Upon ordering your card online, you can select in-person pick-up at the FLOWRA Main Office, Salvacion, Bayombong, or request door-to-door delivery.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 5: CONTACT US ==================== -->
+    <section id="view-contact" class="page-view">
+      <div class="generic-header">
+        <span class="hero-eyebrow">Connect With Us</span>
+        <h2>FLOWRA Main Office &amp; Support</h2>
+      </div>
+
+      <div class="contact-details-box">
+        <p><strong>Office Location:</strong> FLOWRA Main Office, Salvacion, Bayombong, Nueva Vizcaya</p>
+        <p><strong>Hotline:</strong> (02) 8888-FLOW (3569)</p>
+        <p><strong>Email:</strong> desk@flowrabank.ph</p>
+        <p><strong>Office Hours:</strong> Monday – Friday: 8:30 AM – 5:30 PM</p>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER WITH COPYRIGHT ==================== -->
+    <footer class="trust-footer">
+      <p class="footer-legal">
+        <strong>FLOWRA Main Office</strong> — Salvacion, Bayombong, Nueva Vizcaya. Flowra Community Bank is an independent, member-owned mutual financial and time-exchange network.
+      </p>
+      <div class="footer-copyright">
+        &copy; 2026 FLOWRA. All rights reserved.
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ==================== MODAL 1: OUR PRODUCTS / CARDS SHOWCASE MODAL ==================== -->
+  <div id="productsCardsModal" class="full-modal-backdrop" onclick="closeProductsCardsModal(event)">
+    <div class="full-modal-dialog">
+      <button class="modal-close-btn" onclick="closeProductsCardsModalDirect()">&times;</button>
+      
+      <div class="cards-modal-header">
+        <span class="cards-modal-eyebrow">Choose your FLOWRA Card</span>
+        <h2 class="cards-modal-title">Physical &amp; Digital</h2>
+      </div>
+
+      <div class="cards-modal-grid">
+        
+        <!-- 1. DEBIT CARD (₱250) -->
+        <div class="card-item-box">
+          <div class="card-flip-container" onclick="openCardModal('debit')">
+            <div class="card-flip-inner">
+              <div class="flowra-card debit card-front">
+                <img src="logo_png.png" alt="Watermark" class="card-watermark-logo">
+                <div class="card-top">
+                  <div class="brand-section">
+                    <img src="logo_png.png" alt="Logo" class="card-logo-img">
+                    <div class="brand-title-wrap">
+                      <span class="brand-title">FLOWRA</span>
+                      <span class="brand-sub">Community Bank</span>
+                    </div>
+                  </div>
+                  <div class="hardware-section">
+                    <div class="gold-emv-chip"></div>
+                    <div class="gold-paywave">)))</div>
+                  </div>
+                </div>
+                <div class="card-middle">
+                  <div class="card-number" dir="ltr">&bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; 0712</div>
+                </div>
+                <div class="card-bottom">
+                  <div class="holder-info">
+                    <span class="valid-date">Valid Thru 10/31</span>
+                    <span class="holder-name">Mazie Keen Desu</span>
+                  </div>
+                  <div class="card-meta-right">
+                    <div class="card-type-label">DEBIT</div>
+                  </div>
+                </div>
+              </div>
+              <div class="flowra-card debit card-back">
+                <div class="mag-stripe"></div>
+                <div class="back-body">
+                  <div class="signature-row">
+                    <div class="silver-hologram"></div>
+                    <div class="sig-strip">
+                      <span class="sig-name">Mazie Keen Desu</span>
+                      <span class="cvv-box">712</span>
+                    </div>
+                  </div>
+                  <div class="back-emboss-area">
+                    <span class="back-number-text" dir="ltr">&bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; 0712</span>
+                  </div>
+                  <div class="back-legal">
+                    <p>This card is issued by Flowra Community Bank and remains the property of the issuer. If found, please return to FLOWRA Main Office, Salvacion, Bayombong, Nueva Vizcaya.</p>
+                  </div>
+                  <div class="back-footer">
+                    <span class="back-hotline">(02) 8888-FLOW</span>
+                    <span class="back-bank-name">FLOWRA BANK</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-price-tag">₱250 <span class="card-fee-label">Issuance Fee</span></div>
+          <div class="card-actions-row">
+            <button class="btn-description btn-debit" onclick="openCardModal('debit')">Description</button>
+            <button class="btn-order-card" onclick="initiateCardOrder('debit')">Order Card</button>
+          </div>
+        </div>
+
+        <!-- 2. PLATINUM CREDIT CARD (₱300) -->
+        <div class="card-item-box">
+          <div class="card-flip-container" onclick="openCardModal('credit')">
+            <div class="card-flip-inner">
+              <div class="flowra-card credit card-front">
+                <img src="logo_png.png" alt="Watermark" class="card-watermark-logo">
+                <div class="card-top">
+                  <div class="brand-section">
+                    <img src="logo_png.png" alt="Logo" class="card-logo-img">
+                    <div class="brand-title-wrap">
+                      <span class="brand-title">FLOWRA</span>
+                      <span class="brand-sub">Platinum Credit</span>
+                    </div>
+                  </div>
+                  <div class="hardware-section">
+                    <div class="gold-emv-chip"></div>
+                    <div class="gold-paywave">)))</div>
+                  </div>
+                </div>
+                <div class="card-middle">
+                  <div class="card-number" dir="ltr">&bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; 0712</div>
+                </div>
+                <div class="card-bottom">
+                  <div class="holder-info">
+                    <span class="valid-date">Valid Thru 12/32</span>
+                    <span class="holder-name">Mazie Keen Desu</span>
+                  </div>
+                  <div class="card-meta-right">
+                    <div class="card-type-label">CREDIT</div>
+                  </div>
+                </div>
+              </div>
+              <div class="flowra-card credit card-back">
+                <div class="mag-stripe"></div>
+                <div class="back-body">
+                  <div class="signature-row">
+                    <div class="silver-hologram"></div>
+                    <div class="sig-strip">
+                      <span class="sig-name">Mazie Keen Desu</span>
+                      <span class="cvv-box">920</span>
+                    </div>
+                  </div>
+                  <div class="back-emboss-area">
+                    <span class="back-number-text" dir="ltr">&bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; 0712</span>
+                  </div>
+                  <div class="back-legal">
+                    <p>Authorized signature required. Governed by Flowra Credit Standards. If found, return to FLOWRA Main Office, Salvacion, Bayombong, Nueva Vizcaya.</p>
+                  </div>
+                  <div class="back-footer">
+                    <span class="back-hotline">24/7 Desk: (02) 8888-FLOW</span>
+                    <span class="back-bank-name">FLOWRA PLATINUM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-price-tag">₱300 <span class="card-fee-label">Issuance Fee</span></div>
+          <div class="card-actions-row">
+            <button class="btn-description btn-credit" onclick="openCardModal('credit')">Description</button>
+            <button class="btn-order-card" onclick="initiateCardOrder('credit')">Order Card</button>
+          </div>
+        </div>
+
+        <!-- 3. FLOWRA EXECUTIVE CHARGE CREDIT CARD (₱400) -->
+        <div class="card-item-box">
+          <div class="card-flip-container" onclick="openCardModal('charge')">
+            <div class="card-flip-inner">
+              <div class="flowra-card charge card-front">
+                <img src="logo_png.png" alt="Watermark" class="card-watermark-logo">
+                <div class="card-top">
+                  <div class="brand-section">
+                    <img src="logo_png.png" alt="Logo" class="card-logo-img">
+                    <div class="brand-title-wrap">
+                      <span class="brand-title">FLOWRA</span>
+                      <span class="brand-sub">Executive Charge Credit</span>
+                    </div>
+                  </div>
+                  <div class="hardware-section">
+                    <div class="gold-emv-chip"></div>
+                    <div class="gold-paywave">)))</div>
+                  </div>
+                </div>
+                <div class="card-middle">
+                  <div class="card-number" dir="ltr">&bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; 0712</div>
+                </div>
+                <div class="card-bottom">
+                  <div class="holder-info">
+                    <span class="valid-date">Valid Thru 08/33</span>
+                    <span class="holder-name">Mazie Keen Desu</span>
+                  </div>
+                  <div class="card-meta-right">
+                    <div class="card-type-label">CHARGE</div>
+                  </div>
+                </div>
+              </div>
+              <div class="flowra-card charge card-back">
+                <div class="mag-stripe"></div>
+                <div class="back-body">
+                  <div class="signature-row">
+                    <div class="silver-hologram"></div>
+                    <div class="sig-strip">
+                      <span class="sig-name">Mazie Keen Desu</span>
+                      <span class="cvv-box">330</span>
+                    </div>
+                  </div>
+                  <div class="back-emboss-area">
+                    <span class="back-number-text" dir="ltr">&bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; 0712</span>
+                  </div>
+                  <div class="back-legal">
+                    <p>Flowra Executive Charge Facility requires monthly settlement in full. Return to FLOWRA Main Office, Salvacion, Bayombong, Nueva Vizcaya.</p>
+                  </div>
+                  <div class="back-footer">
+                    <span class="back-hotline">Direct: (02) 8888-FLOW</span>
+                    <span class="back-bank-name">FLOWRA EXECUTIVE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-price-tag">₱400 <span class="card-fee-label">Issuance Fee</span></div>
+          <div class="card-actions-row">
+            <button class="btn-description btn-charge" onclick="openCardModal('charge')">Description</button>
+            <button class="btn-order-card" onclick="initiateCardOrder('charge')">Order Card</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 2: CARD SPECIFICATION DETAILS MODAL ==================== -->
+  <div id="cardModal" class="card-modal-backdrop" onclick="closeCardModal(event)">
+    <div class="card-modal-content">
+      <button class="modal-close-btn" onclick="closeCardModalDirect()">&times;</button>
+      <span class="modal-eyebrow" id="modalTag">CARD SPECIFICATIONS</span>
+      <h2 id="modalTitle">Flowra Card</h2>
+
+      <div class="modal-specs-grid" id="modalSpecs"></div>
+
+      <div class="modal-best-for">
+        <h4>Best For</h4>
+        <p id="modalBestFor"></p>
+      </div>
+
+      <p class="modal-note" id="modalNote" style="display: none;"></p>
+
+     <div class="modal-action-bar">
+  <button class="btn-primary" id="btnModalOrder" onclick="orderFromSpecModal()">Order This Card →</button>
+</div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 3: CARD ORDERING & CREDENTIALS CHECKOUT MODAL ==================== -->
+  <div id="orderModal" class="order-modal-backdrop" onclick="closeOrderModal(event)">
+    <div class="order-modal-content">
+      <button class="modal-close-btn" onclick="closeOrderModalDirect()">&times;</button>
+      
+      <div class="order-modal-header">
+        <span class="order-eyebrow">ONLINE APPLICATION</span>
+        <h2 id="orderCardTitle">Order Flowra Card</h2>
+        <div class="order-price-badge">
+          <span id="orderCardPrice">₱0</span>
+          <span class="payment-method-pill">Online Payment Only</span>
+        </div>
+      </div>
+
+      <form id="cardOrderForm" onsubmit="submitCardOrder(event)">
+        
+        <!-- Fulfillment Mode Selection (Salvacion, Bayombong) -->
+        <div class="form-group">
+          <label class="form-label">How would you like to receive your card?</label>
+          <div class="fulfillment-options">
+            <label class="radio-label">
+              <input type="radio" name="fulfillment" value="pickup" checked onchange="handleFulfillmentChange(this.value)">
+              <span class="radio-custom"></span>
+              <span class="radio-text">
+                <strong>Pick up in Office</strong>
+                <small>FLOWRA Main Office: Salvacion, Bayombong, Nueva Vizcaya</small>
+              </span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="fulfillment" value="delivery" onchange="handleFulfillmentChange(this.value)">
+              <span class="radio-custom"></span>
+              <span class="radio-text">
+                <strong>Door-to-Door Delivery</strong>
+                <small>Dispatched safely to your specified home or business address</small>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Personal Credentials Section -->
+        <div class="form-group">
+          <label class="form-label" for="custName">Full Name</label>
+          <input type="text" id="custName" class="form-input" placeholder="e.g. Mazie Keen Desu" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="custPhone">Contact Number</label>
+            <input type="tel" id="custPhone" class="form-input" placeholder="09XX-XXX-XXXX" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="custEmail">Email Address</label>
+            <input type="email" id="custEmail" class="form-input" placeholder="member@email.com" required>
+          </div>
+        </div>
+
+        <!-- Dynamic Delivery Address -->
+        <div class="form-group" id="deliveryAddressGroup" style="display: none;">
+          <label class="form-label" for="custAddress">Complete Delivery Address</label>
+          <textarea id="custAddress" class="form-input" rows="2" placeholder="House/Unit No., Street, Barangay, City/Municipality, Province"></textarea>
+        </div>
+
+        <!-- Payment Notice -->
+        <div class="payment-notice-box">
+          <div class="notice-icon">🔒</div>
+          <div class="notice-text">
+            <strong>Payment Terms:</strong> Issuance fees are paid via <em>Online Payment Only</em> (e-wallet / debit gateway). No cash on delivery accepted.
+          </div>
+        </div>
+
+        <div class="order-action-bar">
+          <button type="submit" class="btn-primary" style="width: 100%;">Proceed to Online Payment →</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    let currentSelectedCardType = 'debit';
+
+    function switchPage(pageId) {
+      document.querySelectorAll('.page-view').forEach(v => v.classList.remove('active'));
+      const target = document.getElementById('view-' + pageId);
+      if (target) target.classList.add('active');
+
+      document.querySelectorAll('.nav-item').forEach(b => b.classList.remove('active'));
+      const activeBtn = document.getElementById('btn-' + pageId);
+      if (activeBtn) activeBtn.classList.add('active');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Modal 1: Products Showcase
+    function openProductsCardsModal() {
+      document.getElementById('productsCardsModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProductsCardsModal(e) {
+      if (e.target.id === 'productsCardsModal') {
+        closeProductsCardsModalDirect();
+      }
+    }
+
+    function closeProductsCardsModalDirect() {
+      document.getElementById('productsCardsModal').classList.remove('open');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Modal 2: Card Specs
+    const cardData = {
+      debit: {
+        tag: "FLOWRA DEBIT",
+        title: "Flowra Debit Card",
+        price: "₱250",
+        specs: [
+          { label: "Card Type", val: "Debit Card" },
+          { label: "Price", val: "₱250 (Online Payment Only)" },
+          { label: "Account", val: "Community Bank Account" },
+          { label: "Limit", val: "Based on Available Balance" },
+          { label: "Payment", val: "Deducted Immediately" },
+          { label: "Interest", val: "None" },
+          { label: "Annual Fee", val: "₱0" },
+          { label: "Monthly Fee", val: "₱0" },
+          { label: "ATM Withdrawal", val: "Available" },
+          { label: "Online Purchase", val: "Available" },
+          { label: "Contactless", val: "Available" },
+          { label: "Overdraft", val: "Not Available" },
+          { label: "Repayment", val: "Not Applicable" }
+        ],
+        bestFor: "Everyday purchases, ATM withdrawals, bills, and transactions using money directly from the user's FLOWRA account.",
+        note: ""
+      },
+      credit: {
+        tag: "FLOWRA CREDIT",
+        title: "Flowra Platinum Credit Card",
+        price: "₱300",
+        specs: [
+          { label: "Card Type", val: "Platinum Credit Card" },
+          { label: "Price", val: "₱300 (Online Payment Only)" },
+          { label: "Limit", val: "₱100,000" },
+          { label: "Payment", val: "Monthly" },
+          { label: "Interest", val: "Applied to Unpaid Balance" },
+          { label: "Annual Fee", val: "₱2,500" },
+          { label: "Monthly Fee", val: "₱0" },
+          { label: "ATM Withdrawal", val: "Available" },
+          { label: "Online Purchase", val: "Available" },
+          { label: "Contactless", val: "Available" },
+          { label: "Credit Building", val: "Available" },
+          { label: "Minimum Payment", val: "Required" },
+          { label: "Repayment", val: "Monthly" }
+        ],
+        bestFor: "Users who want access to a revolving credit line for everyday purchases, larger expenses, and flexible monthly payments.",
+        note: ""
+      },
+      charge: {
+        tag: "FLOWRA CHARGE CREDIT",
+        title: "Flowra Executive Charge Credit Card",
+        price: "₱400",
+        specs: [
+          { label: "Card Type", val: "Executive Charge Card" },
+          { label: "Price", val: "₱400 (Online Payment Only)" },
+          { label: "Limit", val: "Unlimited*" },
+          { label: "Payment", val: "Full Balance Monthly" },
+          { label: "Interest", val: "None on Full Monthly Payment" },
+          { label: "Annual Fee", val: "₱5,000" },
+          { label: "Monthly Fee", val: "₱0" },
+          { label: "ATM Withdrawal", val: "Available" },
+          { label: "Online Purchase", val: "Available" },
+          { label: "Contactless", val: "Available" },
+          { label: "Minimum Payment", val: "Not Applicable" },
+          { label: "Repayment", val: "Full Balance Required" },
+          { label: "Spending Flexibility", val: "High" }
+        ],
+        bestFor: "Users who need high purchasing flexibility and prefer to settle their entire balance at the end of every billing cycle.",
+        note: "*Unlimited means there is no fixed preset spending limit. Spending is still subject to FLOWRA's approval, account status, and transaction policies."
+      }
+    };
+
+    function openCardModal(type) {
+      currentSelectedCardType = type;
+      const data = cardData[type];
+      if (!data) return;
+
+      document.getElementById('modalTag').innerText = data.tag;
+      document.getElementById('modalTitle').innerText = data.title;
+      document.getElementById('modalBestFor').innerText = data.bestFor;
+
+      const specsContainer = document.getElementById('modalSpecs');
+      specsContainer.innerHTML = '';
+      data.specs.forEach(s => {
+        const item = document.createElement('div');
+        item.className = 'spec-cell';
+        item.innerHTML = `<span class="spec-k">${s.label}</span><span class="spec-v">${s.val}</span>`;
+        specsContainer.appendChild(item);
+      });
+
+      const noteEl = document.getElementById('modalNote');
+      if (data.note) {
+        noteEl.innerText = data.note;
+        noteEl.style.display = 'block';
+      } else {
+        noteEl.style.display = 'none';
+      }
+
+      document.getElementById('cardModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCardModal(e) {
+      if (e.target.id === 'cardModal') closeCardModalDirect();
+    }
+
+    function closeCardModalDirect() {
+      document.getElementById('cardModal').classList.remove('open');
+      if (!document.getElementById('productsCardsModal').classList.contains('open')) {
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    function orderFromSpecModal() {
+      closeCardModalDirect();
+      initiateCardOrder(currentSelectedCardType);
+    }
+
+    // Modal 3: Order Flow
+    function initiateCardOrder(type) {
+      currentSelectedCardType = type;
+      const data = cardData[type];
+      document.getElementById('orderCardTitle').innerText = data.title;
+      document.getElementById('orderCardPrice').innerText = data.price;
+      
+      document.getElementById('cardOrderForm').reset();
+      handleFulfillmentChange('pickup');
+
+      document.getElementById('orderModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function handleFulfillmentChange(mode) {
+      const addressGroup = document.getElementById('deliveryAddressGroup');
+      const addressInput = document.getElementById('custAddress');
+      if (mode === 'delivery') {
+        addressGroup.style.display = 'block';
+        addressInput.setAttribute('required', 'required');
+      } else {
+        addressGroup.style.display = 'none';
+        addressInput.removeAttribute('required');
+      }
+    }
+
+    function closeOrderModal(e) {
+      if (e.target.id === 'orderModal') closeOrderModalDirect();
+    }
+
+    function closeOrderModalDirect() {
+      document.getElementById('orderModal').classList.remove('open');
+      if (!document.getElementById('productsCardsModal').classList.contains('open')) {
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    function submitCardOrder(e) {
+      e.preventDefault();
+      const name = document.getElementById('custName').value;
+      const fulfillment = document.querySelector('input[name="fulfillment"]:checked').value;
+      const cardTitle = document.getElementById('orderCardTitle').innerText;
+      const price = document.getElementById('orderCardPrice').innerText;
+
+      const fulfillText = fulfillment === 'pickup' 
+        ? 'Pick-up at FLOWRA Main Office, Salvacion, Bayombong, Nueva Vizcaya' 
+        : 'Door-to-Door Delivery to ' + document.getElementById('custAddress').value;
+
+      alert(`Order Confirmed for ${name}!\n\nCard: ${cardTitle}\nAmount Due: ${price}\nMethod: Online Payment Only\nOption: ${fulfillText}\n\nRedirecting to secure online payment portal...`);
+      
+      closeOrderModalDirect();
+      closeProductsCardsModalDirect();
+    }
+  </script>
+
+</body>
+</html>
